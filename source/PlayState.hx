@@ -1387,16 +1387,16 @@ class PlayState extends MusicBeatState
 		switch (FlxG.random.int(1, 4))
 		{
 			case 1:
-				botplayTxt.text = "CHEATER!";
+				botplayTxt.text = "";
 			case 2:
-				botplayTxt.text = "HE'S FUNKIN CHEATING";
+				botplayTxt.text = "";
 			case 3:
-				botplayTxt.text = "I CAN SEE YOU CHEATING";
+				botplayTxt.text = "";
 			case 4:
-				botplayTxt.text = "CHEATING...";
+				botplayTxt.text = "";
 		}
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "", 32);
 		if (ClientPrefs.downScroll)
 			botplayTxt.y = timeBarBG.y - 78;
 		if (ClientPrefs.middleScroll)
@@ -2829,13 +2829,13 @@ class PlayState extends MusicBeatState
 			switch (FlxG.random.int(1, 4))
 			{
 				case 1:
-					botplayTxt.text = "CHEATER!";
+					botplayTxt.text = "";
 				case 2:
-					botplayTxt.text = "HE'S FUNKIN CHEATING";
+					botplayTxt.text = "";
 				case 3:
-					botplayTxt.text = "I CAN SEE YOU CHEATING";
+					botplayTxt.text = "";
 				case 4:
-					botplayTxt.text = "CHEATING...";
+					botplayTxt.text = "";
 			}
 			alreadyChanged = false;
 		}
@@ -4561,7 +4561,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (!practiceMode && !cpuControlled)
+		if (!practiceMode)
 		{
 			songScore += score;
 			songHits++;
